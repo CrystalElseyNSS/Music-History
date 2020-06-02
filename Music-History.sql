@@ -34,11 +34,13 @@ FROM Album album
 LEFT JOIN Song song ON song.AlbumId = album.Id
 WHERE song.AlbumId IS NULL;
 
-INSERT INTO Artist (ArtistName, YearEstablished) VALUES ('Etta James', 1960);
+INSERT INTO Artist (ArtistName, YearEstablished) VALUES ('Ella Fitzgerald', 1950);
 
-SELECT * FROM Artist;
+INSERT INTO Album (Title, ReleaseDate, AlbumLength, Label, ArtistId, GenreId) VALUES ('Hello, Love', '1959', 3913, 'Verve', 33, 3);
 
-INSERT INTO Album (Title, ReleaseDate, AlbumLength, Label, ArtistId, GenreId) VALUES ('Hello, Love', '1959', 3913, 'Verve', 30, 3);
+INSERT INTO Song (Title, SongLength, ReleaseDate, ArtistId, AlbumId, GenreId) VALUES ('Stairway to the Stars', 254, '1959', 33, 27, 3);
 
-SELECT * FROM Album;
+INSERT INTO Song (Title, SongLength, ReleaseDate, ArtistId, AlbumId, GenreId) VALUES ('Ill Never Be the Same', 427, '1959', 33, 27, 3);
+
+
 
